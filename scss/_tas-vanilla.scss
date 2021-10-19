@@ -1,0 +1,164 @@
+%login-button {
+    display: inline-block !important;
+    text-decoration: none !important;
+    padding: 9px 25px !important;
+    color: #fff !important;
+    border-radius: 16px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    background: $base !important;
+    @include trans;
+    margin: 5px 0 0 5px !important;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+
+    &:hover {
+        background: $base2 !important;
+    }
+}
+
+%jobdetails-button {
+    display: inline-block !important;
+    text-decoration: none !important;
+
+    margin-right: 5px !important;
+    color: #fff !important;
+    border-radius: 35px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    text-transform: uppercase !important;
+    background: $base !important;
+    font-weight: 600 !important;
+    font-size: 2.6rem;
+    padding: 2rem 6rem !important;
+    line-height: 1;
+    width: 100% !important;
+    //max-width: 300px !important;
+    text-align: center !important;
+    border: 1px solid $base !important;
+
+    &:hover {
+        background: transparent !important;
+        border: 1px solid $base !important;
+        color: $base !important;
+
+    }
+}
+
+// Override
+.sh_LoginStatus span {
+    margin-right: 0 !important;
+}
+
+// Container for login buttons
+.tas-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sh_tasButtons,
+.sh_tasSignOut {
+    display: inline-block;
+}
+
+// Login buttons
+.sh_LoginStatus {
+
+    a.tas-button,
+    a:not(.tas-button) {
+        @extend %login-button;
+    }
+
+    span {
+        margin-right: 10px;
+    }
+}
+
+// Edit details buttons
+.sh_tasEditDetail {
+    display: block;
+    margin-bottom: 25px;
+
+    a.tas-button,
+    a:not(.tas-button) {
+        @extend %jobdetails-button;
+    }
+}
+
+// Sign in incomplete page
+.sign-in-incomplete {
+    margin-bottom: 25px;
+
+    .sh_LoginStatus {
+        float: none;
+        text-align: left;
+
+        a.tas-button,
+        a:not(.tas-button) {
+            @extend %jobdetails-button;
+        }
+    }
+}
+
+// Job action buttons
+.jobDetailsCommandRow {
+    a.tas-button {
+        @extend %jobdetails-button;
+    }
+}
+
+// Wicket modal
+#tas-override {
+
+    .wicket-modal {
+        color: #333;
+        position: relative !important;
+        z-index: 999 !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin-top: 0 !important;
+
+        h1:first-of-type {
+            margin-top: 0 !important;
+            margin-bottom: 20px !important;
+            padding-bottom: 20px !important;
+            padding-top: 0 !important;
+            border-bottom: 1px solid #ddd;
+            line-height: 1;
+        }
+
+        .sh_WizardMenu {
+            a {
+                color: #333;
+            }
+        }
+
+        button {
+            background: #333;
+            color: #fff;
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+}
+
+.email-to-friend {
+    .sh_FormPanelHeader {
+        font-size: 18px;
+    }
+
+    .formLabel {
+        display: block;
+    }
+
+    .formControl {
+        margin: 0 0 5px;
+        display: block;
+    }
+
+    .formCommands {
+        display: block;
+    }
+}
